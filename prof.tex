@@ -10,6 +10,22 @@
 \usepackage{morefloats}
 %\usepackage{caption}
 
+%\usepackage {amsmath}
+%\usepackage {amsxtra}
+%\usepackage {amsbsy}
+%\usepackage {amscd}
+\usepackage {array}
+
+%\usepackage {graphics}
+%\usepackage {amsfonts}
+%\usepackage {float}
+%\usepackage {indentfirst}
+%\usepackage{verbatim}
+
+%\usepackage {a4wide}
+%\usepackage {setspace}
+%\usepackage{enumitem}
+
 \newcommand{\nat}{Nature}
 \newcommand{\mnras}{MNRAS}
 \newcommand{\apj}{ApJ}
@@ -110,7 +126,35 @@ ages and weaker implied dipole magnetic fields.
 %
 The short spin periods and highly stable average pulse shapes of MSPs 
 make them powerful tools to investigate various astrophysical phenomena 
-through the high precision timing~\citep[e.g.,][]{Manchester08}.
+using high precision timing of the pulse arrival times~\citep[e.g.,][]{Manchester08}.
+%
+
+The Parkes Pulsar Timing Array (PPTA) project (Manchester et al. 2013) 
+regularly observes $24$ MSPs. The main goal of the project is to identify 
+slight variations in the pulse arrival times from these MSPs that can be 
+identified as being caused by gravitational waves passing through the solar 
+system.  
+%
+The search for gravitational waves has been described in other papers (recent 
+work includes ~\citet{Shannon13b}, Wang et al., Zhu et al.). 
+%
+To achieve these goals, we not only need to observe a larger set of pulsars 
+and increase the span of the observations, but also increase the timing 
+precision of PTA datasets.
+%
+%requires that the pulse arrival times are measured with 
+%a precision and accuracy of $\sim100$ ns over decades. 
+%
+%This requires that the pulse profiles are measured with high signal-to-noise 
+%ratio and are stable over long time spans.  
+%
+The timing precision we can achieve relies on the our understanding of the 
+stability of pulse profiles~\citep[e.g.,][]{Shannon14} and also the frequency 
+evolution and polarization properties.
+%
+For our work we study the large number of well calibrated, high signal-to-noise 
+ratio (S/N) multi-frequency polarization profiles that have been obtained as 
+part of the PPTA project. 
 %
 
 Although previous studies suggest that MSPs and normal pulsars have 
@@ -185,6 +229,23 @@ shown.
 The implications of the results are discussed in Section $6$.
 
 
+% Explain Yan’s work and why we’re now writing another paper
+% We probably should add in loads about Kramer et al., Ord et al. etc. at the start here. I haven’t done that.
+
+An earlier analysis of the pulse profiles from the PPTA sample was published by Yan et al. (2011).  This earlier work is extended in this paper as:
+
+- we include an extra four pulsars that have been recently added to the PPTA sample
+- we use more modern pulsar backend instrumentation than was available to Yan et al. (2011)
+	- our data sets are longer enabling higher S/N ratio profiles
+	- Yan et al. (2011) only analysed observations in the 20\,cm band.  We provide profiles in three independent bands (at 10, 20 and 50\,cm)
+	- we compare different models for different pulsar rotation measures
+
+	We note that we have mainly the same sample of pulsars as was described by Yan et al. (2011), but our data sets are independent (i.e., no data is in common between this and the earlier publication).
+
+	% Explain all the other cool things that we do (or are going to do)
+
+	 Millisecond pulsar profiles are known to be extremely complex (GIVE LOTS OF REFs) and no simple model exists yet that can describe the observations.  This paper is the first in a series of papers that we hope will shed new light on the millisecond pulsar emission mechanism. This first paper is purposely an observationally-based publication.  We present the new profiles in the various observing bands and describe how they were formed.  We determine various observationally-derived properties of the profiles (such as spectral indices, polarisation fractions, etc.) and study how such parameters vary between pulsars and also for different components for a given pulsar.   The data described in this paper will be used in a subsequent paper to study the stability of the pulse profiles as a function of time.  This sample of pulsars has been chosen for high-precision pulsar timing experiments. In a further paper, we will therefore also test out new methods (e.g., XX and Kuo et al. XX) to improve our timing precision using frequency-dependent pulse templates.  As described in this paper, our data sets are being made publically available enabling anyone to compare the actual observations with their models of the pulse profiles.
+
 \section{Observations and Analysis}
 
 \subsection{Observations}
@@ -214,11 +275,14 @@ of observations we used and the total integration time.
 \caption{Observational parameters for the $24$ PPTA MSPs.}
 \label{obs}
 \begin{center}
-\begin{tabular}{lcccccccccccc}
+%\begin{tabular}{lcccccccccccc}
+\begin{tabular}{p{1.7cm}p{0.8cm}<{\centering}p{1.6cm}<{\centering}p{0.8cm}<{\centering}p{0.8cm}<{\centering}p{1.5cm}<{\centering}p{0.8cm}<{\centering}p{0.8cm}<{\centering}p{1.5cm}<{\centering}p{0.8cm}<{\centering}p{0.8cm}<{\centering}p{1.5cm}<{\centering}p{0.8cm}<{\centering}}
 \hline
-PSR         &         & No. of channels &          &         & No. of bins &          &         & No. of obs. &          &         & Integration time &          \\
+PSR         &         & No. of chan. &          &         & No. of bins &          &         & No. of obs. &          &         & Integ. time &          \\
             &         &                 &          &         &             &          &         &             &          &         &   (h)            &       \\
-            & 730 MHz &    1400 MHz     & 3100 MHz & 730 MHz &  1400 MHz   & 3100 MHz & 730 MHz &  1400 MHz   & 3100 MHz & 730 MHz &  1400 MHz        & 3100 MHz    \\
+%            & 730 MHz &    1400 MHz     & 3100 MHz & 730 MHz &  1400 MHz   & 3100 MHz & 730 MHz &  1400 MHz   & 3100 MHz & 730 MHz &  1400 MHz        & 3100 MHz    \\
+        & 730 &    1400     & 3100  & 730 &  1400   & 3100 & 730 &  1400  & 3100 & 730 &  1400 & 3100\\
+        &     &    (MHz)    &       &     &  (MHz)  &      &     &  (MHz) &      &     &  (MHz)&     \\
 \hline
 J0437$-$4715&  256    &    1024         &   1024   &  1024   &  1024       &  2048    &  177    &  669        & 281      &  142.9  &    502.2         &  248.8   \\
 J0613$-$0200&  256    &    1024         &   1024   &  1024   &  512        &  512     &  64     &  160        & 111      &  66.0   &    159.3         &  113.9   \\
@@ -568,8 +632,8 @@ In this section, we present the multi-frequency polarization profiles for
 the $24$ PPTA MSPs. 
 %
 PA variations and polarization profiles in all three bands for each MSP 
-are shown, with the baseline details presented in the bottom panel of each 
-figure.
+are shown, with the baseline details presented in the lower part of each 
+panel.
 %
 In Table \ref{tableWidth}, we present the overall pulse width and pulse 
 widths at $50$ per cent of the peak flux density (W50) and $10$ per cent 
@@ -590,15 +654,23 @@ normally have the highest S/N.
 In Fig. \ref{w50}, the W10 and W50 are plotted against frequency for each MSP. 
 %
 
-Compared with previous studies, we have obstained much higher S/N for 
-polarization pulse profiles in the $728$ MHz, $1369$ MHz and $3100$ MHz. 
+Compared with previous studies, we have obstained much higher S/N pulse 
+profiles, and have multi-frequency and polarization information at the same 
+time.
 %
-We find new low-level emissions for PSR J2145$-$0750
+According to Table \ref{tableWidth}, we increase the overall width by $\sim10$ per 
+cent on average, compared with ~\citet{Yan11}. 
 %
-We also show much more details of the PA curves
+We discover weak components and emissions that unknown before for PSR J2145$-$0750, 
+PSR J1603$-$7202 and PSR J2241$-$5236.
 %
-We show clear frequency evolution of pulse profiles
-
+We also show much more details of the PA curves, including new orthogonal 
+transitions for PSR J1643$-$1224, PSR J0711$-$6830, PSR J0437$-$4715, PSR J2124$-$3358, 
+PSR J2129$-$5721 and PSR J2241$-$5236; and new non-orthogonal transitions for 
+PSR J1045$-$4509, PSR J1857$+$0943 and PSR J2124$-$3358.
+%
+The frequency evolution of pulse profiles and polarization parameters 
+can be clearly seen for all MSPs.
 
 In the following subsections, we present and discuss the multi-frequency 
 polarization profile of each MSPs.
@@ -745,6 +817,9 @@ From the high frequencies to low frequencies, the fractional linear
 polarization increases, and the trailing component becomes high linear 
 polarized. 
 %
+At $728$ MHz, the circular polarization swaps sign compared to higher 
+frequencies.
+%
 
 %The left panel of Fig. \ref{0613d} shows that as frequency decreases, the central component
 %of the mean pulse profile dimnishes and the trailing component increases significantly, 
@@ -795,9 +870,11 @@ previous work.
 %At the trailing edge of the main pulse, we observe a probable orthogonal 
 %mode transition.
 %
-Both the linear and  circular polarisation shows significant evolution 
-with frequency, and the trailing emission becomes stronger at higher 
-frequencies.
+Both the linear and circular polarisation shows significant evolution 
+with frequency, and the circular polarization close to phase $0$ swaps sign 
+at $728$ MHz. 
+%
+The trailing emission becomes stronger at higher frequencies.
 
 %Fig. \ref{1017d} shows that the mean pulse profile develops with frequency. Even through 
 %the S/N of profiles is not very high, we can still see structures in the profile differences 
@@ -814,10 +891,10 @@ See Fig. \ref{0437p} for further details.}
 \end{center}
 \end{figure*}
 
-\subsection{PSR J1022+1001}
+\subsection{PSR J1022$+$1001}
 
 The middle panel of Fig. \ref{1017p} shows the polarization pulse profiles 
-of PSR J1022+1001.
+of PSR J1022$+$1001.
 %
 Our results are in good agreement with previously published results
 ~\citep{1022Kramer99,Stairs99,Ord04,Yan11}.
@@ -878,11 +955,14 @@ At $1369$ MHz, our results are in good agreement with previously published
 results~\citep{Yan11}, and confirm the leading emission which is joined to 
 the main pulse by a low-level bridge of emission.
 %
-We show the complex PA curve with more details, especially the PA of the 
+We show the complex PA curve with more details, and determine the PA of the 
 low-level bridge connecting the leading emission and the main pulse.
 %
 At the leading edge of the main pulse, there is a non-orthogonal transition 
 rather than a orthogonal transition expected by ~citet{Yan11}.
+%
+The PA of the low-level bridge emission seems to be discontinuous with 
+the rest of the PA variations and could be an orthogonal transition.
 %
 Except for that at low frequencies, the peak at the trailing edge of the 
 main peak disappears and the fractional linear polarization of the trailing 
@@ -945,7 +1025,15 @@ PSR J1600$-$3053.
 At $1369$ MHz, our results are generally consistent with previously published
 results~\citep{Ord04,Yan11}.
 %
-The fractional linear polarization decreases at lower frequencies.
+The leading component of the main pulse becomes weaker at low frequencies 
+relative to the main peak.
+%
+The central part of the pulse profile depolarizes rapidly as frequency goes 
+down. 
+%
+We see a sign swap of the circular polarization between $3100$ and 
+$1369$ MHz, and at $728$ MHz, the circular polarization becomes almost 
+$0$ across the whole profile.
 
 %The left panel of Fig. \ref{1600d} shows that from high frequencies to low 
 %frequencies, the leading peak of the main pulse becomes weaker. 
@@ -977,10 +1065,10 @@ See Fig. \ref{0437p} for further details.}
 \end{center}
 \end{figure*}
 
-\subsection{J1603$-$7202}
+\subsection{PSR J1603$-$7202}
 
 The middle panel of Fig. \ref{1600p} shows the polarization pulse profiles of 
-J1603$-$7202, in three bands.
+PSR J1603$-$7202.
 %
 At $1369$ MHz, our results are in good agreement with previously published
 results~\citep{Ord04,Yan11}.
@@ -991,8 +1079,10 @@ pulse can be clearly identified.
 We find that there are low-level emissions connecting the main pulse and the 
 double-peak trailing pulse.
 %
-As frequency decreases, the second peak of the mean pulse profile becomes highly 
-circular polarized, and the PAs between two main peaks show great changes.
+The relative strength of the two main peaks evolves significantly with frequency.
+%
+As frequency goes down, the second main peak becomes highly circular polarized, 
+and the low-level emissions almost disappear.
 
 %The left panel of Fig. \ref{1603d} shows that from high frequencies to low 
 %frequencies, the main peak of the mean pulse profile becomes much weaker 
@@ -1019,18 +1109,20 @@ circular polarized, and the PAs between two main peaks show great changes.
 %second peak.
 
 
-\subsection{J1643$-$1224}
+\subsection{PSR J1643$-$1224}
 
 The bottom panel of Fig. \ref{1600p} shows the polarization pulse profiles of 
-J1643$-$1224, in three bands.
+PSR J1643$-$1224.
 %
 At $1369$ MHz, our results are in good agreement with and extend previously published
 results~\citep{Ord04,Yan11}.
 %
-The PA of the broad feature preceding the main pulse is determined and found to be 
-discontinuous with the rest of the PA variation.
+The PA of the broad feature preceding the main pulse is determined and 
+found to be not only discontinuous with the rest of the PA variation, but 
+also show an orthogonal transition.
 %
-Both the linear and circular polarization develop with frequency.
+While the linear and circular polarization show clear frequency development,
+the total intensity does not evolve with frequency significantly.
 
 %The mean pulse profile evolves little with frequency, except for that the emission 
 %at the leading edge of the main pulse disappears at lower frequencies.
@@ -1038,19 +1130,24 @@ Both the linear and circular polarization develop with frequency.
 %Within each bands, the profile development is not obvious, but we can still see 
 %the drifts of phase shift.
 
-\subsection{J1713+0747}
+\subsection{PSR J1713$+$0747}
 
-The top panel of Fig. \ref{1713p} shows the polarization pulse profiles of J1713+0747 
-in three bands.
+The top panel of Fig. \ref{1713p} shows the polarization pulse profiles of 
+PSR J1713$+$0747. 
 %
 At $1369$ MHz, our results are consistent with previously published results
 ~\citep{Ord04,Yan11}, showing the almost complete linear polarized leading and 
-trailing componets.
+trailing components.
 %
-At $3100$ MHz, one orthogonal PA transition at the leading edge of the main peak 
-is observed. At $1369$ MHz, a new orthogonal PA transition at around phase $0.02$
-appears. At $728$ MHz, another orthogonal PA transition appears at phase $0.9$.
+We detect weak emissions at phase $\sim-0.2$ at $1369$ MHz, and increase the 
+overall width from $104^{\circ}$ to $131^{\circ}$. 
 %
+The non-orthogonal transition preceding the trailing pulse component reported 
+by ~citet{Yan11} is observed at $728$ and $3100$ MHz, but not at $1369$ MHz 
+where the PA curve is continuous.
+%
+The linear polarization of the leading and trailing components become stronger 
+at low frequencies relative to the rest of the profile.
 
 %The left panel of Fig. \ref{1713d} shows that from high frequencies to low 
 %frequencies, we can see that the second component of the profile gradually merges 
@@ -1070,14 +1167,27 @@ See Fig. \ref{0437p} for further details.}
 \end{center}
 \end{figure*}
 
-\subsection{J1730$-$2304}
+\subsection{PSR J1730$-$2304}
 
-The middle panel of Fig. \ref{1713p} shows the polarization pulse profiles of J1730$-$2304 
-in three bands.
+The middle panel of Fig. \ref{1713p} shows the polarization pulse profiles of 
+PSR J1730$-$2304.
 %
 At $1369$ MHz, our results are consistent with previously published results
-~\citep{Ord04,Yan11}, clearly showing the weak leading and trailing componets.
+~\citep{Ord04,Yan11}. 
 %
+We clearly show the weak leading and trailing components already reported, 
+and detect weaker leading component not discovered before, which increases 
+overall width from $232^{\circ}$ to $248^{\circ}$.
+%
+The pulse profile is very complex, with four clear peaks across the main pulse.
+%
+The relative strength of these four peaks changes dramatically in different 
+bands. While at $3100$ MHz the second peak is the strongest, at $728$ the third 
+becomes stronger. 
+%
+As frequency goes down, the second peak depolarizes rapidly.
+%
+The PA variations is also complex and are very different in three bands.
 
 %The mean pulse profile of this MSP have multiple peaks, and the left panel of 
 %Fig. \ref{1730d} shows that as the frequency decreases, the amplitudes of different 
@@ -1102,10 +1212,10 @@ At $1369$ MHz, our results are consistent with previously published results
 %\end{center}
 %\end{figure*}
 
-\subsection{J1744$-$1134}
+\subsection{PSR J1744$-$1134}
 
-The bottom panel of Fig. \ref{1713p} shows the polarization pulse profiles of J1744$-$1134 
-in three bands.
+The bottom panel of Fig. \ref{1713p} shows the polarization pulse profiles of 
+PSR J1744$-$1134.
 %
 At $1369$ MHz, our results are consistent with previously published results
 ~\citep{Yan11}.
@@ -1113,10 +1223,15 @@ At $1369$ MHz, our results are consistent with previously published results
 The multiple-component precursor is clearly identified and no significant 
 post-cursor component is observed.
 %
-The PA of the precursor is shown and seems to be complex but continuous.
+While the PAs of the main pulse show smooth decrease, those of the precursor 
+have clear structures and do not simply connect with the rest of the PA 
+variations.
 %
-The circular polarizaion grows stronger from $3100$ to $1369$ MHz, but diminish 
-at $728$ MHz.
+The shape of the PA curves are similar in three bands.
+%
+The main pulse is highly linearly polarized from $728$ to $3100$ MHz. 
+The circular polarizaion of main pulse grows stronger from $3100$ to $1369$ MHz, 
+but diminish at $728$ MHz.
 
 %The left panel of Fig. \ref{1744d} shows that the mean pulse profile evolution with 
 %frequency is not obvious. For the precursor, it seems that the second peak becomes 
@@ -1125,30 +1240,27 @@ at $728$ MHz.
 %However, we can still see significant drifts of phase shifts.
 
 
-\begin{figure*}
-\begin{center}
-\includegraphics[width=6 in]{1824_1832_1857.ps}
-\caption{Multi-frequency polarization profiles for PSR J1824$-$2452 (top 
-panel), PSR J1832$-$0836 (middle panel) and PSR J1857$+$0943 (bottom panel). 
-See Fig. \ref{0437p} for further details.}
-\label{1824p}
-\end{center}
-\end{figure*}
-
-\subsection{J1824$-$2452}
+\subsection{PSR J1824$-$2452}
 
 The top panel of Fig. \ref{1824p} shows the polarization pulse profiles of 
-J1824$-$2452 
-in three bands.
+PSR J1824$-$2452.
 %
 At $1369$ MHz, our results are consistent with and extend previously published 
 results~\citep{Yan11}.
 %
-The highly linear polarized component leading the first peak and its PA 
-are shown.
+The weak component around phase $-0.4$ is clearly shown and is highly 
+linearly polarized. 
 %
-The PA variation across these components appears continuous.
+At $1369$ MHz, we also show that there are low-level bridge emissions 
+connecting the two the main components of the pulse profile.
 %
+The PAs of preceding components are continuous themselves, but are 
+discontinuous with the rest of the PA variations.
+%
+The frequency evolution of the total intensity is significant. The first 
+main peak observed at $1369$ MHz and the trailing component grow rapidly 
+relative to rest of the profile as frequency goes down, while the leading 
+component diminish at low frequencies.
 
 %From the left panel of Fig. \ref{1824d}, we see that from high frequencies to 
 %low frequencies, the leading peak becomes stronger and stronger, while the main 
@@ -1161,33 +1273,52 @@ The PA variation across these components appears continuous.
 %panel. It seems that the main peak is shifting which results in the drift 
 %of phase shifts.
 
-\subsection{J1832$-$0836}
+\begin{figure*}
+\begin{center}
+\includegraphics[width=6 in]{1824_1832_1857.ps}
+\caption{Multi-frequency polarization profiles for PSR J1824$-$2452 (top 
+panel), PSR J1832$-$0836 (middle panel) and PSR J1857$+$0943 (bottom panel). 
+See Fig. \ref{0437p} for further details.}
+\label{1824p}
+\end{center}
+\end{figure*}
+
+\subsection{PSR J1832$-$0836}
 
 The middle panel of Fig. \ref{1824p} shows the polarization pulse profiles of 
-J1832$-$0836 
-in three bands.
+PSR J1832$-$0836.
 %
 At $1369$ MHz, our results are consistent with and extend previously published 
 results~\citep{Burgay13}.
 %
 The components around phase $-0.45$ and $-0.08$ are highly linearly polarized. 
 %
-The PAs around phase $-0.05$ and $0.3$ show evidences of jumps, but is hard 
+The PAs around phase $-0.05$ and $0.3$ seem to be discontinuous, but is hard 
 to confirm due to the low S/N.
 
 
-\subsection{J1857+0943}
+\subsection{PSR J1857$+$0943}
 
 The bottom panel of Fig. \ref{1824p} shows the polarization pulse profiles of 
-J1857+0943 
-in three bands.
+PSR J1857$+$0943.
 %
 At $1369$ MHz, our results are generally consistent with previously published 
 results~\citep{Yan11}.
 %
-We show more details of the PA variation, which is very complex and inconsistent 
+We show more details of the PA variation, which is very complex and inconsistent
 with the RVM.
 %
+At leading edge of the main pulse, the PA decreases rapidly followed by an 
+orthogonal mode transition. 
+%
+Around phase $0.05$, there is evidence of a non-orthogonal transition.
+%
+Close to the peak of the interpulse, the PA shows discontinuity at $1369$ MHz, 
+but becomes continuous at $3100$ MHz.
+%
+Both the main pulse and the interpulse have multiple components and evolve 
+with frequency, and at $728$ MHz there is a new linear polarization component 
+appearing close to the center of the main pulse.
 
 %The left panel of Fig. \ref{1857d} shows that across the bands, the main pulse 
 %shape, which is consist of the main pulse and an interpulse, does not evolve 
@@ -1201,18 +1332,17 @@ with the RVM.
 %%
 %The profile evolution with bands and the drifts of phase shift are not obvious. 
 
-\subsection{J1909$-$3744}
+\subsection{PSR J1909$-$3744}
 
 The top panel of Fig. \ref{1909p} shows the polarization pulse profiles of 
-J1909$-$3744 
-in three bands.
+PSR J1909$-$3744.
 %
 At $1369$ MHz, our results are generally consistent with results of~\citet{Ord04,Yan11}, 
-showing a narrow main pulse and a weak feature preceding the main pulse by about $0.45$ 
-in phase.
+showing a narrow main pulse and a weak feature preceding the main pulse by 
+about $0.45$ in phase.
 %
-The fractional linear polarization increases as the frequency decreases, and the
-PAs do not change much across bands.
+The frequency evolution of pulse profile is hard to see, however, the fractional 
+linear polarization increases as the frequency decreases.
 
 %The left panel of Fig. \ref{1909d} shows that the mean pulse profile evolution 
 %across bands seem to be tiny, only with slightly width increasing.
@@ -1230,11 +1360,10 @@ See Fig. \ref{0437p} for further details.}
 \end{center}
 \end{figure*}
 
-\subsection{J1939+2134}
+\subsection{PSR J1939$+$2134}
 
 The middle panel of Fig. \ref{1909p} shows the polarization pulse profiles of 
-J1939+2134 
-in three bands.
+PSR J1939$+$2134.
 %
 At $1369$ MHz, our results are generally consistent with previously published 
 results~\citep{Yan11}.
@@ -1244,12 +1373,14 @@ are significantly affected by DM smearing, and we do not see the secondary
 maxima at the trailing edges of both the main pulses and interpulse
 ~\citep{Thorsett90,Stairs99,Ord04}.
 %
-We confirmed the existence of weak components preceding both the main pulse 
-and interpulse in all three bands, and rule out the possibility of undetected 
-RFI or instrumental problems.
+We confirm the existence of weak components preceding both the main pulse 
+and interpulse and show that they are highly linear polarized, and therefore 
+rule out the possibility of undetected RFI or instrumental problems.
 %
 Our results show stronger left-circular emission in the main pulse compared 
 to ~\citep{Yan11}.
+%
+The interpulse becomes stronger relative to the main pulse at lower frequencies.
 %
 The fractional linear polarization of the main pulse increases significantly 
 as frequency decreases while that of the interpulse decreases.
@@ -1261,16 +1392,26 @@ as frequency decreases while that of the interpulse decreases.
 %development, and the phase shifts significantly drift.
 
 
-\subsection{J2124$-$3358}
+\subsection{PSR J2124$-$3358}
 
 The bottom panel of Fig. \ref{1909p} shows the polarization pulse profiles of 
-J2124$-$3358 
-in three bands.
+PSR J2124$-$3358.
 %
-At $1369$ MHz, the complex profile we show here is generally consistent with previously published results~\citep{Yan11}.
+At $1369$ MHz, the complex profile we show here is generally consistent with 
+previously published results~\citep{Yan11}.
 %
 We are able to provide more details of the PA variation and show that it has 
 complex structures.
+%
+At $1369$ MHz, around phase $0.03$ and $-0.5$, there are evidences of two 
+orthogonal mode transitions.
+%
+At $3100$ MHz, around phase $0.1$, there is a non-orthogonal transition of 
+$\sim120^{\circ}$.
+%
+The frequency evolution of pulse profile is relatively weak, but we can 
+still see that the trailing edge of the main pulse becomes stronger at 
+lower frequencies and the main peak splits into two peaks.
 %
 The fractional linear polarization of the main pulse increases at lower 
 frequencies.
@@ -1285,11 +1426,10 @@ frequencies.
 %The pulse profile evolution and phase shifts within bands are not very 
 %obvious.
 
-\subsection{J2129$-$5721}
+\subsection{PSR J2129$-$5721}
 
 The top panel of Fig. \ref{2129p} shows the polarization pulse profiles of 
-J2124$-$5721 
-in three bands.
+PSR J2124$-$5721.
 %
 At $1369$ MHz, our results are in good agreement with and extend previously 
 published results~\citep{Yan11}.
@@ -1297,9 +1437,14 @@ published results~\citep{Yan11}.
 The weaker leading shelf of emission extends to at least phase of $-0.4$, and 
 the post-cursor clearly has multiple components.
 %
-We show more details of PA in the trailng edge of the main pulse, and show that 
-PA do not simply decrease through the pulse, and discontinuous features at the 
-phase of the trailing main-pulse component are confirmed.
+We show more details of PA in the trailng edge of the main pulse.  
+%
+The PA decrease across the main pulse, and then increase quickly followed 
+by an orthogonal mode transition.
+%
+From high frequencies to low frequencies, the trailing main-pulse component 
+diminishes rapidly, and the second component of the main pulse becomes stronger
+than the first component.
 %
 The fractional linear polarization of the main pulse increases as frequency 
 decreases.
@@ -1321,21 +1466,24 @@ See Fig. \ref{0437p} for further details.}
 \end{center}
 \end{figure*}
 
-\subsection{J2145$-$0750}
+\subsection{PSR J2145$-$0750}
 
 The middle panel of Fig. \ref{2129p} shows the polarization pulse profiles of 
-J2145$-$0750 
-in three bands.
+PSR J2145$-$0750.
 %
 At $1369$ MHz, our results are in good agreement with and extend reviously 
 published results~\citep{Yan11}.
 %
-A new orthogonal transition appears at the trailing edge of the main peak in 
-the $50$cm band.
-%
 Around phase $0.4$, there are evidences of low-level emissions which 
-significantly extends the overall width of this MSPs.
+significantly extends the overall width of this MSPs from $187^{\circ}$ to 
+$277^{\circ}$.
 %
+At $728$ MHz, a new discontinuous feature appears at the trailing edge of 
+the main peak. 
+%
+The trailing emission and the weak leading component become stronger relative 
+to the main pulse at lower frequencies, but the PA curves are generally similar 
+in three bands.
 
 %The left panel of Fig. \ref{2145d} shows that the most significant pulse 
 %profile evolution is that the trailing part of the main pulse and the leading 
@@ -1344,18 +1492,21 @@ significantly extends the overall width of this MSPs.
 %Within $10$cm and $20$cm bands, the profile evolution can be seen and the 
 %phase shifts drift significantly.
 
-\subsection{J2241$-$5236}
+\subsection{PSR J2241$-$5236}
 
 The bottom panel of Fig. \ref{2129p} shows the polarization pulse profiles of 
-J2241$-$5236 
-in three bands.
+PSR J2241$-$5236.
 %
-At $1369$ MHz, our results generally agree with and extend reviously published results~\citep{Keith11}.
+At $1369$ MHz, our results generally agree with and extend reviously published 
+results~\citep{Keith11}.
 %
 We show a new low-level component around phase $0.4$ with a width of $\sim 0.2$.
 %
-We also show more details of the PA variations which are complex and discontinuous.
+We also show more details of the complex PA variations and there are evidences 
+of two orthogonal mode transitions close to the peak.
 %
+The frequency evolution of pulse profile is hard to see, but the fractional 
+linear polarization increases at lower frequencies.
 
 %\begin{figure*}
 %\begin{center}
