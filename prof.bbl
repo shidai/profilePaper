@@ -1,4 +1,4 @@
-\begin{thebibliography}{33}
+\begin{thebibliography}{38}
 \expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
 
 \bibitem[{{Bhat} {et~al}\mbox{.}(2004){Bhat}, {Cordes}, {Camilo}, {Nice}, \&
@@ -20,6 +20,15 @@
 
 \bibitem[{{Han} \& {Manchester}(2001)}]{Han01}
 {Han} J.~L., {Manchester} R.~N., 2001, \mnras, 320, L35
+
+\bibitem[{{Hobbs} {et~al}\mbox{.}(2011){Hobbs}, {Miller}, {Manchester},
+  {Dempsey}, {Chapman}, {Khoo}, {Applegate}, {Bailes}, {Bhat}, {Bridle},
+  {Borg}, {Brown}, {Burnett}, {Camilo}, {Cattalini}, {Chaudhary}, {Chen},
+  {D'Amico}, {Kedziora-Chudczer}, {Cornwell}, {George}, {Hampson}, {Hepburn},
+  {Jameson}, {Keith}, {Kelly}, {Kosmynin}, {Lenc}, {Lorimer}, {Love}, {Lyne},
+  {McIntyre}, {Morrissey}, {Pienaar}, {Reynolds}, {Ryder}, {Sarkissian},
+  {Stevenson}, {Treloar}, {van Straten}, {Whiting}, \& {Wilson}}]{Hobbs11}
+{Hobbs} G. {et~al.}, 2011, \pasa, 28, 202
 
 \bibitem[{{Hobbs} {et~al}\mbox{.}(2006){Hobbs}, {Edwards}, \&
   {Manchester}}]{Hobbs06}
@@ -62,6 +71,10 @@
   {Doroshenko}, {Jessner}, {Wielebinski}, {Wolszczan}, \& {Camilo}}]{Kramer98}
 {Kramer} M., {Xilouris} K.~M., {Lorimer} D.~R., {Doroshenko} O., {Jessner} A.,
   {Wielebinski} R., {Wolszczan} A., {Camilo} F., 1998, \apj, 501, 270
+
+\bibitem[{{Liu} {et~al}\mbox{.}(2014){Liu}, {Desvignes}, {Cognard}, {Stappers},
+  {Verbiest}, {Lee}, {Champion}, {Kramer}, {Freire}, \& {Karuppusamy}}]{Liu14}
+{Liu} K. {et~al.}, 2014, ArXiv e-prints
 
 \bibitem[{{Lorimer} \& {Kramer}(2005)}]{Lorimer05}
 {Lorimer} D.~R., {Kramer} M., 2005, {Handbook of Pulsar Astronomy}. Cambridge
@@ -106,11 +119,27 @@
 {Ord} S.~M., {van Straten} W., {Hotan} A.~W., {Bailes} M., 2004, \mnras, 352,
   804
 
+\bibitem[{{Pennucci} {et~al}\mbox{.}(2014){Pennucci}, {Demorest}, \&
+  {Ransom}}]{Pennucci14}
+{Pennucci} T.~T., {Demorest} P.~B., {Ransom} S.~M., 2014, ArXiv e-prints
+
 \bibitem[{{Radhakrishnan} \& {Cooke}(1969)}]{Radhakrishnan69}
 {Radhakrishnan} V., {Cooke} D.~J., 1969, \aplett, 3, 225
 
 \bibitem[{{Rankin}(1993)}]{Rankin93}
 {Rankin} J.~M., 1993, \apj, 405, 285
+
+\bibitem[{{Shannon} {et~al}\mbox{.}(2014){Shannon}, {Os{\l}owski}, {Dai},
+  {Bailes}, {Hobbs}, {Manchester}, {van Straten}, {Raithel}, {Ravi}, {Toomey},
+  {Bhat}, {Burke-Spolaor}, {Coles}, {Keith}, {Kerr}, {Levin}, {Sarkissian},
+  {Wang}, {Wen}, \& {Zhu}}]{Shannon14}
+{Shannon} R.~M. {et~al.}, 2014, ArXiv e-prints
+
+\bibitem[{{Shannon} {et~al}\mbox{.}(2013){Shannon}, {Ravi}, {Coles}, {Hobbs},
+  {Keith}, {Manchester}, {Wyithe}, {Bailes}, {Bhat}, {Burke-Spolaor}, {Khoo},
+  {Levin}, {Oslowski}, {Sarkissian}, {van Straten}, {Verbiest}, \&
+  {Want}}]{Shannon13b}
+{Shannon} R.~M. {et~al.}, 2013, Science, 342, 334
 
 \bibitem[{{Sotomayor-Beltran} {et~al}\mbox{.}(2013){Sotomayor-Beltran},
   {Sobey}, {Hessels}, {de Bruyn}, {Noutsos}, {Alexov}, {Anderson}, {Asgekar},
